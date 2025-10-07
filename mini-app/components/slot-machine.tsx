@@ -11,6 +11,7 @@ export function SlotMachine() {
   const [values, setValues] = useState<string[]>(["🍒", "🍋", "🍊"]);
   const [spinning, setSpinning] = useState(false);
   const [win, setWin] = useState(false);
+  const [spinCount, setSpinCount] = useState(0);
 
   const spin = () => {
     setSpinning(true);
@@ -23,7 +24,17 @@ export function SlotMachine() {
       setValues(newValues);
       setSpinning(false);
       const allSame = newValues.every((v) => v === newValues[0]);
-      setWin(allSame);
+
+      // Increment spin counter
+      const newSpinCount = spinCount + 1;
+      setSpinCount(newSpinCount);
+
+      // Force a win on the 20th spin
+      if (newSpinCount >= 20) {
+        setWin(true);
+      } else {
+        setWin(allSame);
+      }
     }, 1500);
   };
 
