@@ -1,4 +1,4 @@
-import { Share } from "@/components/share";
+import { SlotMachine } from "@/components/slot-machine";
 import { Button } from "@/components/ui/button";
 import { description, title } from "@/lib/metadata";
 import { Metadata } from "next";
@@ -47,9 +47,7 @@ export default function Home() {
       <Button asChild>
         <Link href="/farcaster-info">Farcaster Info</Link>
       </Button>
-      <Share
-        text={`Check out this mini app template! ${process.env.NEXT_PUBLIC_URL}`}
-      />
+      <SlotMachine />
     </main>
   );
 }
