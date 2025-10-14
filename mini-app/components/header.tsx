@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import {
   Drawer,
@@ -18,7 +19,7 @@ const pages = [
   {
     label: (
       <div className="flex place-items-center gap-2">
-        <img
+        <Image
           className="size-[40px]"
           src="/icon.png"
           alt="icon"

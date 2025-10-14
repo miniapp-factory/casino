@@ -52,7 +52,7 @@ export function SlotMachine() {
             You won {winnings} points!
           </span>
           <Share
-            message={`I just won ${winnings} points on the Slot Machine Mini App!`}
+            text={`I just won ${winnings} points on the Slot Machine Mini App!`}
           />
         </div>
       )}
